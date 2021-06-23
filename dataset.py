@@ -1,5 +1,5 @@
 import torch
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
 
 
 class KanHope(Dataset):
@@ -18,7 +18,7 @@ class KanHope(Dataset):
           sampler that yields integral indices.  To make it work with a map-style
           dataset with non-integral indices/keys, a custom sampler must be provided.
         """
-    def __init__(self, text, translation, label, tokenizer1, tokenizer2, max_len):
+    def __init__(self, text: object, translation: object, label: object, tokenizer1: object, tokenizer2: object, max_len: object) -> object:
         self.text = text
         self.translation = translation
         self.label = label
@@ -65,3 +65,5 @@ class KanHope(Dataset):
             'attention_mask2': encoding2['attention_mask'].flatten(),
             'label': torch.tensor(label, dtype=torch.float)
         }
+
+
