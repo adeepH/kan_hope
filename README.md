@@ -12,6 +12,7 @@ https://zenodo.org/record/5006517/
 
 3) Run `test.py` for inference.
 
+4) Under the same directory, run `get_predictions.py` to view classification reports and confusion matrix.
 ## [Steps to run the Dual Channel BERT-based models (DC-BERT4HOPE)](https://github.com/adeepH/KanHope/tree/main/Dual%20Channel%20models)
 1) Download the English translations of the code-mixed Kannada-English dataset, along with the splits:
 ```buildoutcfg
@@ -23,5 +24,28 @@ https://Zenodo.org/record/4904729/
    a)`model1:` Monolingual English language model (Translated Texts).
    b)`model2:` Multilingual language model (Kannada-English code-mixed text).
    
+4) under the same directory run `get_predictions.py` to view the classification reports and confusion matrix.
+
+5) The architecture of the dual channel model is as follows:
 
 <img width = "2406" src = "https://github.com/adeepH/KanHope/blob/main/dc_bert4hope.png">
+
+This approach could be used for any multilingual datasets. The weights of the fine-tuned models are available on my Huggingface account [AdWeeb](https://huggingface.co/AdWeeb).
+
+We have provided the [notebooks](https://github.com/adeepH/KanHope/tree/main/Notebooks) for reference.
+
+
+If you use our dataset, and/or find our codes useful, please cite our paper:
+```buildoutcfg
+@article{hande-etal-kanhope,
+    title = "Hope Speech detection in under-resourced Kannada language",
+    author = "Hande, Adeep and
+              Priyadharshini, Ruba and
+              Sampath, Anbukkarasi and
+              Thamburaj, Kingston Pal and
+              Chandran, Prabakaran and
+              Chakravarthi, Bharathi Raja ",
+      journal={SN Computer Science},
+      publisher={Springer}
+    }
+```
