@@ -24,4 +24,4 @@ https://Zenodo.org/record/4904729/
    b)`model2:` Multilingual language model (Kannada-English code-mixed text).
    
 
-<img width = "2406" src = "https://github.com/SiddhanthHegde/You-Need-to-Pay-More-Attention/blob/main/Meme%20img%20.jpg">
+<img width = "2406" src = "https://github.com/adeepH/KanHope/blob/main/dual_channel.png">
