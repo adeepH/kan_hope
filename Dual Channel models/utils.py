@@ -1,3 +1,5 @@
+from typing import List
+
 from torch.utils.data import DataLoader
 import torch
 from dataset import KanHope
@@ -7,7 +9,7 @@ import numpy as np
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
-def create_data_loader(df, tokenizer1, tokenizer2, max_len: object, batch_size):
+def create_data_loader(df, tokenizer1, tokenizer2, max_len, batch_size):
     ds = KanHope(
         text=df.tweets.to_numpy(),
         translation=df.transation.to_numpy(),
@@ -29,7 +31,7 @@ def epoch_time(start_time, end_time):
     return elapsed_min, elapsed_secs
 
 
-def train_epoch(model, data_loader, loss_fn, optimizer, device, scheduler, n_examples):
+def train_epoch(model, data_loader, loss_fn, optimizer, scheduler, n_examples):
     model = model.train()
     losses = []
     correct_predictions = 0
@@ -64,7 +66,7 @@ def train_epoch(model, data_loader, loss_fn, optimizer, device, scheduler, n_exa
     return correct_predictions.double() / n_examples, np.mean(losses)
 
 
-def eval_model(model, data_loader, loss_fn, device, n_examples):
+def eval_model(model, data_loader, loss_fn, n_examples):
     model = model.eval()
     losses = []
     correct_predictions = 0
@@ -84,11 +86,9 @@ def eval_model(model, data_loader, loss_fn, device, n_examples):
                 attention_mask2=attention_mask2
             )
 
-            # _, preds = torch.max(outputs, dim=1)
-            preds = [0 if x < 0.5 else 1 for x in outputs]
+            preds: List[int] = [0 if x < 0.5 else 1 for x in outputs]
             preds = torch.tensor(preds).to(device)
             loss = loss_fn(outputs, labelsviewed)
-            # loss = loss_fn(outputs, labels)
             correct_predictions += torch.sum(preds == labels)
             losses.append(loss.item())
             torch.cuda.empty_cache()
