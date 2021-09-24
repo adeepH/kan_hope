@@ -30,24 +30,25 @@ https://Zenodo.org/record/4904729/
 
 5) The architecture of the dual channel model is as follows:
 
-<img width = "2406" src = "https://github.com/adeepH/KanHope/blob/main/dc_bert4hope.png">
+<img width = "60%" src = "https://github.com/adeepH/KanHope/blob/main/Images/dc_bert4hope.png">
 
 This approach could be used for any multilingual datasets. The weights of the fine-tuned models are available on my Huggingface account [AdWeeb](https://huggingface.co/AdWeeb).
 
 We have provided the [notebooks](https://github.com/adeepH/KanHope/tree/main/Notebooks) for reference.
 
+# Experiments, Results, and Discussions
+The code and their explanation for all the experiments are present in the Jupyter Notebook. We document interesting findings, results, discussions and qualitative analysis in the manuscript.
+
+<img width= "60%" src = "https://github.com/adeepH/KanHope/blob/main/Images/results.png">
 
 If you use our dataset, and/or find our codes useful, please cite our paper:
 ```buildoutcfg
-@article{hande-etal-kanhope,
-    title = "Hope Speech detection in under-resourced Kannada language",
-    author = "Hande, Adeep and
-              Priyadharshini, Ruba and
-              Sampath, Anbukkarasi and
-              Thamburaj, Kingston Pal and
-              Chandran, Prabakaran and
-              Chakravarthi, Bharathi Raja ",
-      journal={SN Computer Science},
-      publisher={Springer}
-    }
+@misc{hande2021hope,
+      title={Hope Speech detection in under-resourced Kannada language}, 
+      author={Adeep Hande and Ruba Priyadharshini and Anbukkarasi Sampath and Kingston Pal Thamburaj and Prabakaran Chandran and Bharathi Raja Chakravarthi},
+      year={2021},
+      eprint={2108.04616},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
