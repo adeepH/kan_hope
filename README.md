@@ -1,7 +1,6 @@
 # KanHope
 This is the code for the paper "Hope Speech detection in under-resourced Kannada language"
 
-This is a collaborative work by [Adeep Hande](https://github.com/adeepH), Ruba Priyadharshini, Anbukkarasi Sampath, Kingston Pal Thamburaj, [Prabakaran Chandran](https://github.com/Prabakaran-Chandran), and [Bharathi Raja Chakravarthi](https://github.com/bharathichezhiyan)
 
 ## [Steps to run the Vanilla sequence classification tasks:](https://github.com/adeepH/KanHope/tree/main/Vanilla%20sequence%20Classification)
 1) Download the corresponding files from Zenodo:
